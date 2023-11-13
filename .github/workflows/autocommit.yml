@@ -7,7 +7,7 @@ on:
       - master
       
   schedule:
-  - cron: "30 0,3,6,9,12,15,18,21 * * *"
+  - cron: "0 */1 */1 */1 *"
 
 jobs:
   auto_commit:
@@ -50,4 +50,4 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           directory: "."
-          github_token: ${{ secrets.AUTO_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
